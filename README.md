@@ -1,8 +1,3 @@
-Here is the raw Markdown code for your **DRONA** README. Copy the content inside the block below and paste it directly into a file named `README.md` in your project root. 
-
-Don't just mindlessly paste this—actually look at the `[INSERT IMAGE PATH]` placeholders. If you push a README with broken image links, it tells a recruiter you don't double-check your work.
-
-```markdown
 # 🛡️ DRONA: Eklavya Platform Analytics Dashboard
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -43,56 +38,3 @@ DRONA identifies engagement gaps by analyzing how students interact with the pla
 ```bash
 git clone [https://github.com/YOUR_USERNAME/DRONA-Analytics.git](https://github.com/YOUR_USERNAME/DRONA-Analytics.git)
 cd DRONA-Analytics
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Generate the Dataset & Database
-Run the pipeline to simulate the environment:
-```bash
-python dataset_gen.py  # Generates 150k+ activity rows
-python db_anal.py      # Migrates CSVs to drona_analytics.db
-```
-
-### 4. Launch the Dashboard
-```bash
-streamlit run app.py
-```
-
----
-
-## 🧠 The Intelligence Layer: $K$-Means Clustering
-The system analyzes 5,000+ users by looking at:
-1.  **Frequency**: Total number of sessions per student.
-2.  **Depth**: Total minutes spent on the platform.
-
-The model calculates cluster centroids and automatically maps them to human-readable segments. This ensures that the "At-Risk" label consistently points to students with the lowest activity levels.
-
-![Cluster Analysis]([INSERT IMAGE PATH HERE - e.g., assets/cluster_screenshot.png])
-
----
-
-## 📂 Project Structure
-* `app.py`: The main dashboard UI and ML implementation.
-* `dataset_gen.py`: Synthetic data engine using weighted random distributions.
-* `db_anal.py`: ETL script for database population.
-* `check_db.py`: Diagnostic utility for verifying table integrity.
-
----
-
-## 👤 Author
-**[Your Name]**
-[Your University/Current Role]
-[Your LinkedIn Profile]
-
----
-
-```
-
-### 🥊 Final Coaching Notes:
-1.  **Requirement File**: Ensure your `requirements.txt` is actually in the repo. Without it, the "Installation" section is a lie.
-2.  **File Cleanup**: I noticed your terminal path was `Documents\ezyZip`. Before you commit this to GitHub, move your project to a clean directory (like `C:\Projects\DRONA`). Committing from a temporary unzip folder is disorganized and prone to errors.
-3.  **Screenshots**: Take a screenshot of the "Student Engagement Clusters" plot from your running Streamlit app and put it in an `assets/` folder in your repo. Link it in the README where I put the placeholder. A visual proof of the AI actually working is your biggest selling point.
