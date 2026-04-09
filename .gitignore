@@ -1,0 +1,4 @@
+drona_analytics.db 
+*.csv 
+__pycache__/ 
+.venv/ 
