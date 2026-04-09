@@ -38,7 +38,36 @@ DRONA identifies engagement gaps by analyzing how students interact with the pla
 ```bash
 git clone [https://github.com/YOUR_USERNAME/DRONA-Analytics.git](https://github.com/YOUR_USERNAME/DRONA-Analytics.git)
 cd DRONA-Analytics
-
+```
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
+3. Generate the Dataset & Database
+   Run the pipeline to simulate the environment:
+   ```Bash
+   python dataset_gen.py
+   ```
+   # Generates 150k+ activity rows
+```
+python db_anal.py
+```
+  # Migrates CSVs to drona_analytics.db
+5. Launch the Dashboard
+   ```Bash
+   streamlit run app.py
+   ```
+## 🧠 The Intelligence Layer: K-Means Clustering
+The system analyzes 5,000+ users by looking at:
+1. **Frequency**: Total number of sessions per student.
+2. **Depth**: Total minutes spent on the platform.
+
+The model calculates cluster centroids and automatically maps them to human-readable segments. This ensures that the "At-Risk" label consistently points to students with the lowest activity levels.
+
+---
+
+## 📂 Project Structure
+* `app.py`: The main dashboard UI and ML implementation.
+* `dataset_gen.py`: Synthetic data engine using weighted random distributions.
+* `db_anal.py`: ETL script for database population.
+* `check_db.py`: Diagnostic utility for verifying table integrity.
