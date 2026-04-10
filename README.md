@@ -36,7 +36,7 @@ DRONA identifies engagement gaps by analyzing how students interact with the pla
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/DRONA-Analytics.git](https://github.com/YOUR_USERNAME/DRONA-Analytics.git)
+git clone https://github.com/git-clone-adi/-DRONA-AD
 cd DRONA-Analytics
 ```
 ### 2. Install Dependencies
